@@ -53,5 +53,9 @@ class Assets {
   /// Assets for imagesSettings
   /// assets/images/settings.svg
   static const String imagesSettings = "assets/images/settings.svg";
+
+  /// Assets for imagesWallet2
+  /// assets/images/wallet-2.svg
+  static const String imagesWallet2 = "assets/images/wallet-2.svg";
 }
 
