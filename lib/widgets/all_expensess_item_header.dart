@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:responsive_dashboard/utils/app_images/app_images.dart';
+
 
 class AllExpensessItemHeader extends StatelessWidget {
-  const AllExpensessItemHeader({super.key, required this.image});
+  const AllExpensessItemHeader(
+      {super.key,
+      required this.image,
+      this.imageBackgroundColor,
+      this.imageColor});
   final String image;
+  final Color? imageBackgroundColor, imageColor;
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -12,19 +18,26 @@ class AllExpensessItemHeader extends StatelessWidget {
         Container(
           width: 60,
           height: 60,
-          decoration: const ShapeDecoration(
-            color: Color(0xFFFAFAFA),
-            shape: OvalBorder(),
+          decoration: ShapeDecoration(
+            color: imageBackgroundColor ?? const Color(0xFFFAFAFA),
+            shape: const OvalBorder(),
           ),
           child: Padding(
             padding: const EdgeInsets.all(14.0),
-            child: SvgPicture.asset(image),
+            child: SvgPicture.asset(
+              image,
+              colorFilter: ColorFilter.mode(
+                  imageColor ?? const Color(0xFF4EB7F2), BlendMode.srcIn),
+            ),
           ),
         ),
-        
         Transform.rotate(
-            angle: -1.57079*2,
-            child: const Icon(Icons.arrow_back_ios_new_outlined))
+          angle: -1.57079 * 2,
+          child: Icon(
+            Icons.arrow_back_ios_new_outlined,
+            color: imageColor == null ? const Color(0xFF064061) : Colors.white,
+          ),
+        )
       ],
     );
   }

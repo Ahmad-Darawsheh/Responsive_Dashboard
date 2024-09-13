@@ -4,6 +4,7 @@ import 'package:responsive_dashboard/utils/app_images/app_images.dart';
 import 'package:responsive_dashboard/widgets/all_expensess_header.dart';
 
 import 'package:responsive_dashboard/widgets/all_expensess_row.dart';
+import 'package:responsive_dashboard/widgets/custom_background_container.dart';
 
 class AllExpensess extends StatelessWidget {
   AllExpensess({super.key});
@@ -26,14 +27,7 @@ class AllExpensess extends StatelessWidget {
   ];
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(20),
-      decoration: ShapeDecoration(
-        color: Colors.white,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
-        ),
-      ),
+    return CustomBackgroundContainer(
       child: Column(
         children: [
           const AllExpensessHeader(),
@@ -46,4 +40,3 @@ class AllExpensess extends StatelessWidget {
     );
   }
 }
-
