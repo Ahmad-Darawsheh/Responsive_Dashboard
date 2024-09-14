@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dashboard/models/all_expensess_model.dart';
 import 'package:responsive_dashboard/utils/app_images/app_images.dart';
 import 'package:responsive_dashboard/widgets/all_expensess_item.dart';
-import 'package:responsive_dashboard/widgets/inactive_item_and_active.dart';
+
 
 class AllExpensessItemsRow extends StatefulWidget {
   AllExpensessItemsRow({

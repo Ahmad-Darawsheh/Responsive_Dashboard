@@ -26,7 +26,7 @@ class LatestTransactionListView extends StatelessWidget {
       child: Row(
         children: items.asMap().entries.map((e) {
           int index = e.key;
-          var item = e.value;
+     
           return IntrinsicWidth(
             child: UserInfoListTile(
               image: items[index].image,
