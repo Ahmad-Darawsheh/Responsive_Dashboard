@@ -18,7 +18,7 @@ class _MyCardsSectionState extends State<MyCardsSection> {
   void initState() {
     pageController=PageController();
     pageController.addListener((){
-      curPageIndex=pageController.page!.toInt();
+      curPageIndex=pageController.page!.round();
       setState(() {
         
       });
