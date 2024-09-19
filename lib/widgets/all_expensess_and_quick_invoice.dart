@@ -13,7 +13,7 @@ class AllExpensesAndQucikInvoice extends StatelessWidget {
       children: [
         
         AllExpensess(),
-        const SizedBox(height: 24,),
+        const SizedBox(height: 14,),
         const QucikInvoice(),
       ],
     );

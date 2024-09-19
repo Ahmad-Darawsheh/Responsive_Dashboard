@@ -29,10 +29,11 @@ class _MyCardsSectionState extends State<MyCardsSection> {
   Widget build(BuildContext context) {
     return  Column(
       children: [
-        const SizedBox(
+         SizedBox(
           width: 420,
-          child:  Text('My card',style: AppStyles.styleSemiBold20,),
+          child:  Text('My card',style: AppStyles.styleSemiBold20(context),),
         ),
+        const SizedBox(height: 10,),
         MyCardsPageView(pageController: pageController,),
         const SizedBox(height: 20,),
          Padding(

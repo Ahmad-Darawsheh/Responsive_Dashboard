@@ -36,34 +36,37 @@ class _AllExpensessItemsRowState extends State<AllExpensessItemsRow> {
   Widget build(BuildContext context) {
     return Row(
       // children: item.map((e) => Expanded(child: AllExpensessItem(model: e))).toList(),
-      children: item.asMap().entries.map((e) {
-        int index = e.key;
-        var item = e.value;
-        if (index == 1) {
-          return Expanded(
+      children: [ Expanded(
             child: GestureDetector(
-              onTap: (){updateIndex(index);},
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 12),
-                child: AllExpensessItem(
-                  model: item,
-                  isSelected: selectedIndex == index,
-                ),
+              onTap: (){updateIndex(0);},
+              child: AllExpensessItem(
+                model: item[0],
+                isSelected: selectedIndex == 0,
               ),
             ),
-          );
-        } else {
-          return Expanded(
-            child: GestureDetector(
-              onTap: (){updateIndex(index);},
-              child: AllExpensessItem(
-            model: item,
-            isSelected: selectedIndex == index,
           ),
+          const SizedBox(width: 10,),
+          Expanded(
+            child: GestureDetector(
+              onTap: (){updateIndex(1 );},
+              child: AllExpensessItem(
+                model: item[1],
+                isSelected: selectedIndex == 1,
+              ),
             ),
-          );
-        }
-      }).toList(),
+          ),
+          const SizedBox(width: 10,),
+          Expanded(
+            child: GestureDetector(
+              onTap: (){updateIndex(2);},
+              child: AllExpensessItem(
+                model: item[2],
+                isSelected: selectedIndex == 2,
+              ),
+            ),
+          ),
+          
+        ]
     );
   }
   

@@ -12,8 +12,8 @@ class TransactionHistory extends StatelessWidget {
          Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            const Text('Transaction History',style: AppStyles.styleSemiBold20,),
-            Text('See all',style: AppStyles.styleMedium16.copyWith(color: const Color(0xFF4EB7F2),),),
+             Text('Transaction History',style: AppStyles.styleSemiBold20(context),),
+            Text('See all',style: AppStyles.styleMedium16(context).copyWith(color: const Color(0xFF4EB7F2),),),
             
           ],
         ),

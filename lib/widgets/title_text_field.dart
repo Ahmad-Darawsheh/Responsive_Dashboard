@@ -9,7 +9,7 @@ class TitleTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Column(
       children: [
-        const Text('Customer name',style: AppStyles.styleMedium16,),
+         Text('Customer name',style: AppStyles.styleMedium16(context),),
         const SizedBox(height: 12,),
         CustomTextField(hint: hint,),
       ],
